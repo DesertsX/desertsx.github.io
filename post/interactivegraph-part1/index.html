@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://desertsx.github.io//favicon.ico?v=1555857946352">
+<link rel="shortcut icon" href="https://desertsx.github.io//favicon.ico?v=1555858488856">
 <link rel="stylesheet" href="https://desertsx.github.io//styles/main.css">
 
 
@@ -37,7 +37,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://desertsx.github.io/">
-        <img src="https://desertsx.github.io//images/avatar.png?v=1555857946352" class="site-logo">
+        <img src="https://desertsx.github.io//images/avatar.png?v=1555858488856" class="site-logo">
         <h1 class="site-title">古柳（Deserts-X）</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -127,7 +127,7 @@
 <p><img src="https://desertsx.github.io//post-images/1555857140792.jpg" alt=""></p>
 <h2 id="股票图谱">股票图谱</h2>
 <p>正所谓：“无巧不成书”，世上就果真有那么巧的事，没几日就看到<a href="https://mp.weixin.qq.com/s/ijxfAhE1Bn-Qs2HfuSseMg">利用 Tushare 数据实现知识图谱效果</a>这篇新近出炉的文章（感谢作者提供完整代码和数据，下文将补上自己实践明星关系图谱的代码和数据后，统一开源供大家学习），原作者调用 <code>Tushare API 接口</code>，拿到股票及其最基础的属性数据，如股票所属地区 <code>area</code>、所属工业类别 <code>industry</code> 和所属板块 <code>market</code> 等。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/mWf3TomJladN0dMT44aYXlKCvVp5HuNLPVOFyKU6ibEMsdaDic9whExBCrkqJND9NK6JD5EqQefJeCjEibWnKEhbg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555858483260.png" alt=""></p>
 <p>将其转换成开源项目 <a href="https://github.com/grapheco/InteractiveGraph">grapheco/InteractiveGraph</a> 所需的数据格式（上述代码均在 <code>stock-demo.py</code> 中，如果只是关心可视化结果，可以略过上述步骤，因为转换后的数据已经存在于<code>webapp\static\stock_graph.json</code>） ，运行 <code>webapp\app_run.py</code> ，打开 <a href="http://127.0.0.1:5000/graph/relation?stock1=%E5%B9%B3%E5%AE%89%E9%93%B6%E8%A1%8C&amp;stock2=%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C">http://127.0.0.1:5000/graph/relation?stock1=平安银行&amp;stock2=招商银行</a> 就能看到漂亮的图谱，可改成其他股票名称查看效果。</p>
 <p><img src="https://desertsx.github.io//post-images/1555857163262.jpg" alt=""></p>
 <p>以上，差不多就是全部流程了，如果你只是想了解下该项目是如何实现的，其实知道这么多就够了，真的非常简单，前端的东西都是现成的，只需要准备好数据，套用一下模板，就能拿出去“装逼”了。</p>
