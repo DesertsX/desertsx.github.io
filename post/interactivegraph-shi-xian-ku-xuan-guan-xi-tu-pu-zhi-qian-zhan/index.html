@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://desertsx.github.io//favicon.ico?v=1555857084193">
+<link rel="shortcut icon" href="https://desertsx.github.io//favicon.ico?v=1555857270780">
 <link rel="stylesheet" href="https://desertsx.github.io//styles/main.css">
 
 
@@ -37,7 +37,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://desertsx.github.io/">
-        <img src="https://desertsx.github.io//images/avatar.png?v=1555857084193" class="site-logo">
+        <img src="https://desertsx.github.io//images/avatar.png?v=1555857270780" class="site-logo">
         <h1 class="site-title">古柳（Deserts-X）</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -124,16 +124,16 @@
 <p>再是不久前爬取明星相互关系的数据（还是那句话数据质量不一定多高，仅为练手），以供 <code>neo4j</code> 上手操练之用，并写有详细的入门教程： <a href="https://zhuanlan.zhihu.com/p/61096301">一文教你用 Neo4j 快速构建明星关系图谱</a>，而 <code>neo4j</code> 是赫然写在 <a href="https://github.com/grapheco/InteractiveGraph">grapheco/InteractiveGraph</a>  这一开源项目的 <code>github</code> 介绍中的。</p>
 <p><img src="https://desertsx.github.io//post-images/1555856719004.png" alt=""></p>
 <p>除此之外，再无有过多研究，只说来日因缘际会再去看看。虽然有因为不懂前端等技术、难以上手“官方教程”而推脱日后再研究之意，但或许更多地是古柳深信没准哪一天就有人助我填补了自身浅薄的知识与酷炫的开源项目之间的鸿沟，然后就像往昔文章中常常提到的“因缘际会”四字一般，一切自然而然地得以解决，新技能得以 get 了！</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5C%E6%98%8E%E6%97%A5%E4%BD%95%E5%85%B6%E5%A4%9A_%E4%B8%8E_%E6%97%A0%E5%B7%A7%E4%B8%8D%E6%88%90%E4%B9%A6.jpg" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857140792.jpg" alt=""></p>
 <h2 id="股票图谱">股票图谱</h2>
 <p>正所谓：“无巧不成书”，世上就果真有那么巧的事，没几日就看到<a href="https://mp.weixin.qq.com/s/ijxfAhE1Bn-Qs2HfuSseMg">利用 Tushare 数据实现知识图谱效果</a>这篇新近出炉的文章（感谢作者提供完整代码和数据，下文将补上自己实践明星关系图谱的代码和数据后，统一开源供大家学习），原作者调用 <code>Tushare API 接口</code>，拿到股票及其最基础的属性数据，如股票所属地区 <code>area</code>、所属工业类别 <code>industry</code> 和所属板块 <code>market</code> 等。</p>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_png/mWf3TomJladN0dMT44aYXlKCvVp5HuNLPVOFyKU6ibEMsdaDic9whExBCrkqJND9NK6JD5EqQefJeCjEibWnKEhbg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt=""></p>
 <p>将其转换成开源项目 <a href="https://github.com/grapheco/InteractiveGraph">grapheco/InteractiveGraph</a> 所需的数据格式（上述代码均在 <code>stock-demo.py</code> 中，如果只是关心可视化结果，可以略过上述步骤，因为转换后的数据已经存在于<code>webapp\static\stock_graph.json</code>） ，运行 <code>webapp\app_run.py</code> ，打开 <a href="http://127.0.0.1:5000/graph/relation?stock1=%E5%B9%B3%E5%AE%89%E9%93%B6%E8%A1%8C&amp;stock2=%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C">http://127.0.0.1:5000/graph/relation?stock1=平安银行&amp;stock2=招商银行</a> 就能看到漂亮的图谱，可改成其他股票名称查看效果。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Cstock-graph.jpg" alt="stock-graph"></p>
+<p><img src="https://desertsx.github.io//post-images/1555857163262.jpg" alt=""></p>
 <p>以上，差不多就是全部流程了，如果你只是想了解下该项目是如何实现的，其实知道这么多就够了，真的非常简单，前端的东西都是现成的，只需要准备好数据，套用一下模板，就能拿出去“装逼”了。</p>
 <h2 id="热身一下">热身一下</h2>
 <p>而如果你想更进一步应用到自己的数据上，并且像开头红楼梦项目一样加上图像的话（有图真的灵动好看很多），那么下面的实战部分将帮你实现这个愿望！</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Capachecn-qq.png" alt="apachecn-qq"></p>
+<p><img src="https://desertsx.github.io//post-images/1555857176455.png" alt=""></p>
 <p>首先是用片刻老哥手动构造的关于 <a href="http://home.apachecn.org/">ApacheCN 中文开源组织</a> 的小数据集 <code>apachecn-basic.csv</code> 热热身，当然我在此基础上将每个人的图像由统一的绿帽头盔图（老哥对绿帽真的情有独钟呢）改成了各人的 qq 头像，并在 <code>webapp\static\images\person\</code> 文件夹下保存好相应图片；</p>
 <p><strong>注意：这里每一行是每个 person 对应每个 project （如：ml/dl/kaggle）的格式，所以单个 person 可能出现很多行</strong>；</p>
 <pre><code>id,person,image,area,project,info
@@ -153,10 +153,10 @@
 5,咸鱼,static/images/person/咸鱼.jpg,北京,dl,咸鱼
 </code></pre>
 <p>接着运行 <code>apachecn-demo.py</code> ，照旧将 csv 数据转换成所需的 json 格式， 存于<code>webapp\static\apachecn-demo.json</code> ，因为本次实战明星关系图谱的数据转换代码不同于片刻老哥的，所以此处不做详细介绍，大家可自行理解，不懂的可以去找他请教（你有福了，群主叫你晚上去他房间.avi）；</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5C%E7%BE%A4%E4%B8%BB%E5%8F%AB%E4%BD%A0%E5%8E%BB%E4%BB%96%E6%88%BF%E9%97%B4.jpg" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857187803.jpg" alt=""></p>
 <p>当然由于后续我的版本将用 <code>pandas</code> 结合手头的项目手动一步步处理数据，可能不是很方便大家直接套用到自己的数据上，所以还是推荐搞懂 <code>apachecn-demo.py</code> 或 <code>stock-demo.py</code>，更好地实现可重用的函数。</p>
 <p>至于为什么我不是按照这里的代码去处理数据，而非要自行实现，实在是因为明星相互关系的数据和上述股票和组织的数据都不太一样，具体差异后续再说。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5C%E6%97%A0%E5%A5%88.jpg" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857198696.jpg" alt=""></p>
 <p>扯回来，有了 json 数据后，其实还需要插入下面一段玄妙的 <code>JavaScript</code> 代码（这段 <code>translator</code> 打头的代码可插在 <code>categories</code> 和 <code>data</code> 之间，可去文件中查看），至于为什么不一并在转换数据的代码中一并实现？</p>
 <pre><code>&quot;translator&quot;: {
     &quot;nodes&quot;: function (node) {
@@ -180,13 +180,13 @@
   },
 </code></pre>
 <p>对此菜鸡的片刻老哥和我都表示“非不为也，实不能也”，说人话就是“不会！”那也是很无奈了，只求万能的读者去实现了。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5C%E6%B5%81%E4%B8%8B%E4%BA%86%E6%B2%A1%E6%8A%80%E6%9C%AF%E7%9A%84%E6%B3%AA%E6%B0%B4.jpg" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857210716.jpg" alt=""></p>
 <p>当然还有一个可能算是“薛定谔的好消息”是，片刻老哥去该项目的 github 提了 <code>iusse</code> ：<a href="https://github.com/grapheco/InteractiveGraph/issues/6">是否可以将 gson 中的function 写到 html 页面的script中？</a></p>
 <p>然后......然后项目贡献者可能手头正好有新版本的代码，于是顺势把代码从 <code>InteractiveGraph 0.1.1</code> 版本更新到了 <code>InteractiveGraph 0.2.0</code>！</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Cgithub-issue.png" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857221018.png" alt=""></p>
 <p>新版本的第二个特性是 <code>Optimize the code</code>，结合上面 <code>issue</code> 里的回复应该是不再需要在 json 里加那段玄妙的 JS 代码了，当然因为本次实践都还是基于旧版本的，所以依然需要手动加上。</p>
 <p>在此讲述下这个插曲，方便后来人了解区别，可资选择。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Cgithub-issue-2.png" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857228608.png" alt=""></p>
 <p>再次说回数据准备好后，只需要将要渲染的 <code>webapp\templates\apachecn-demo-relation.html</code>里要加载的 json 文件名改成对应的即可。</p>
 <p>至于这个 html 文件上面并没有提及，因为股票一例各方面都是匹配的，所以先行略过，等实战时需要修改了再涉及。</p>
 <p>而回到 <a href="https://github.com/grapheco/InteractiveGraph">grapheco/InteractiveGraph</a> 上来，原始开源项目支持三种模式：<code>GraphNavigator</code>、 <code>GraphExplorer</code> 和 <code>RelFinder</code>。股票一例是第三种，下图是第一种也是本次明星关系图谱将要实现的模式。</p>
@@ -200,10 +200,10 @@ def apachecndemo():
     return render_template('apachecn-demo-relation.html')
 </code></pre>
 <p>最后运行 <code>webapp\app_run.py</code>，打开对应网址，就行了。虽然扯了这么多，才出现这么个破图，但一切瞎扯都是值得的。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Capachecn-graph-1.png" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857242521.png" alt=""></p>
 <p>毕竟更酷炫的明星关系图谱，差不多也就是这么个流程，先放张效果图~~（和略大的GIF动图）~~，下一篇文章再好好讲实战吧，这篇文章也是越写越飞、越写越歪、越扯越长，光顾着调侃片刻老哥，不过也确实绕不过去了。</p>
 <p>再者想把全部内容都塞到一篇文章里也过于冗长，这样一分为二，倒也未为不可。</p>
-<p><img src="E:%5C0_md_articles%5Cimages%5Cstar-graph.jpg" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857251633.jpg" alt=""></p>
 <p>最后再小结下几个关键步骤：</p>
 <ol>
 <li>有一份 csv 或其他格式的想要图谱可视化的数据，想显示图像的，也需要准备好；</li>
@@ -211,7 +211,7 @@ def apachecndemo():
 <li>修改对应 html 以及 <code>graph_view.py</code> 文件；</li>
 <li>运行 <code>app_run.py</code> ，打开对应网页即可。</li>
 </ol>
-<p><img src="E:%5C0_md_articles%5Cimages%5Cylq-star-graph.gif" alt=""></p>
+<p><img src="https://desertsx.github.io//post-images/1555857268094.gif" alt=""></p>
 
             </div>
             
